@@ -1,6 +1,6 @@
-package Lesson_1;
+package HomeWork_1;
 
-public class RunningTrack implements Obstaclable {
+public class RunningTrack extends Obstaclable {
     int length;
 
     public RunningTrack(int length) {
