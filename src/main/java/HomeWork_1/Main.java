@@ -1,24 +1,24 @@
-package Lesson_1;
+package HomeWork_1;
 
 public class Main {
     public static void main(String[] args) {
-        JumpableRunnable[] members = {
+        JumpAndRun[] members = {
                 new Human(2, 2, "Андрей"),
-                new Human(1, 2, "Арсений"),
+                new Human(1, 2, "Александр"),
                 new Cat(3, 4, "Пятнышко"),
-                new Cat(1, 1, "Барсик"),
-                new Robot(0, 10, 10),
-                new Robot(4,7,12)
+                new Cat(1, 1, "Тень"),
+                new Robot(0, 10, "R2-D2"),
+                new Robot(4,7,"C-3PO")
         };
 
         Obstaclable[] obstacles = {
-                new RunningTrack(1),
+                new RunningTrack(2),
                 new RunningTrack(4),
                 new Wall(1),
                 new Wall(3)
         };
 
-        for (JumpableRunnable member : members) {
+        for (JumpAndRun member : members) {
             System.out.println("К прохождению препятствий приступает " + member);
             boolean winner = true;
             for (Obstaclable obstacle : obstacles) {
@@ -36,7 +36,7 @@ public class Main {
             if(winner) {
                 System.out.println(member + " прошёл дистанцию!");
             } else {
-                System.out.println(member + " проиграл.");
+                System.out.println(member + " не смог пройти дистанцию.");
             }
             System.out.println();
         }
