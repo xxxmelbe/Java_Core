@@ -1,6 +1,6 @@
-package Lesson_1;
+package HomeWork_1;
 
-public class Wall implements Obstaclable {
+public class Wall extends Obstaclable {
     int height;
 
     public Wall(int height) {

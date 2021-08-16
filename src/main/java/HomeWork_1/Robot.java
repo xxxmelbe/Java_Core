@@ -1,14 +1,14 @@
-package Lesson_1;
+package HomeWork_1;
 
-public class Human implements JumpableRunnable {
+public class Robot extends JumpAndRun {
     int maxHeight;
     int maxLength;
-    String name;
+    String RobotName;
 
-    public Human(int maxHeight, int maxLength, String name) {
+    public Robot(int maxHeight, int maxLength, String RobotName) {
         this.maxHeight = maxHeight;
         this.maxLength = maxLength;
-        this.name = name;
+        this.RobotName = RobotName;
     }
 
     @Override
@@ -18,7 +18,7 @@ public class Human implements JumpableRunnable {
 
     @Override
     public void jump() {
-        System.out.println("Human run");
+        System.out.println("Робот прыгает");
     }
 
     @Override
@@ -28,11 +28,11 @@ public class Human implements JumpableRunnable {
 
     @Override
     public void run() {
-        System.out.println("Human jump");
+        System.out.println("Робот бежит");
     }
 
     @Override
     public String toString() {
-        return "Человек по имени " + name;
+        return "Робот по имени " + RobotName;
     }
 }
